@@ -1,0 +1,362 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model YobitTradingBot.Models.LoginModel
+
+@*<div class="jumbotron">
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>*@
+
+@*<div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>*@
+
+<style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        color: white;
+        padding-left: 0;
+        background-color: #141415;
+    }
+
+    .body-content {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+
+    section {
+        height: 100vh;
+    }
+
+        section.sec1 {
+            background: url(../../Content/gaiEOc.JPG) no-repeat center / cover;
+            background-attachment: fixed;
+        }
+
+        section.sec2 {
+            background: url(../../Content/Intro-HELLO-FUTURE-1920x1080_v2.gif) no-repeat center / cover;
+            background-attachment: fixed;
+        }
+
+        section.sec3 {
+            background: url(../../Content/QC_Neural_Networks_2880x1620-2880x1620.JPG)no-repeat center / cover;
+            background-attachment: fixed;
+        }
+
+        section.sec4 {
+            background: url(../../Content/8F5pwh.JPG)no-repeat center / cover;
+            background-attachment: fixed;
+        }
+
+    .sec-text {
+        padding: 4% 8%;
+        height: auto;
+        width: 100%;
+    }
+
+    .sec-text__title {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
+
+    .sec-text__dsc {
+        font-size: 1em;
+    }
+
+    /*Стили содержимого*/
+
+    .form {
+        color: white;
+        position: relative;
+        z-index: 1;
+        background-color: #000000b8;
+        max-width: 1024px;
+        height: inherit;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+        font-family: sans-serif;
+    }
+
+    .custom-editor {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        outline: 0;
+        background: #0000007d;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .button {
+        font-family: 'DKCForever', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: olivedrab;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+        .button:hover, .button:active, .button:focus {
+            background: white;
+            color: black;
+        }
+
+
+        /*Стили для слайдера*/
+    body {
+        background-color: #24292d;
+    }
+
+    .slider {
+        position: relative;
+        width: 920px;
+        margin: 50px auto;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+    }
+
+        .slider input[name="switch"] {
+            display: none;
+        }
+
+    .switch {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        text-align: center;
+        width: 100%;
+    }
+
+        .switch label {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            margin: 0 3px;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+            border-radius: 50%;
+            border: 6px solid #6b8e23;
+            background-color: #738290;
+        }
+
+    #btn1:checked ~ .switch label[for="btn1"] {
+        background-color: white;
+    }
+
+    #btn2:checked ~ .switch label[for="btn2"] {
+        background-color: white;
+    }
+
+    #btn3:checked ~ .switch label[for="btn3"] {
+        background-color: white;
+    }
+
+    .slider-inner {
+        overflow: hidden;
+    }
+
+    .slides {
+        width: 300%;
+        transition: all 1s;
+    }
+
+        .slides img {
+            width: 920px;
+            height: 340px;
+            float: left;
+        }
+
+    #btn1:checked ~ slider-inner slides {
+        transform: translate(0);
+    }
+
+    #btn2:checked ~ .slider-inner .slides {
+        transform: translate(-920px);
+    }
+
+    #btn3:checked ~ .slider-inner .slides {
+        transform: translate(-1840px);
+    }
+
+</style>
+
+<body>
+
+    <section class="sec1">
+        <div class="form">
+
+            <table id="table">
+                <tr>
+
+                    <td>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/cSB56O4i7Sc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </td>
+
+                    <td style="border-left-width: 5px; padding-left: 20px; text-align: justify; font-size: larger">
+                        
+                            <div style="font-family: 'DKCForever';">
+                                Yobit Trading Bot
+                            </div>
+                            Это первая в России площадка для размещения торговых алгоритмов на криптовалютном рынке. Отличие этой системы от обычных торговых ботов или высокотехнологичных нейронных сетей в том, что она очень легко расширяется и гибко настраивается.
+                            <br>
+                            <br>
+                            Вы можете работать по нескольким алгоритмам, выбрав подходящий для себя или предложить свой собственный - это базовая, уникальная концепция Yobit Trading Bot!
+                            
+                    </td>
+                </tr>
+
+                <div class="slider">
+                    <input type="radio" name="switch" id="btn1" checked>
+                    <input type="radio" name="switch" id="btn2">
+                    <input type="radio" name="switch" id="btn3">
+
+                    <div class="switch">
+                        <label for="btn1"></label>
+                        <label for="btn2"></label>
+                        <label for="btn3"></label>
+                    </div>
+
+                    <div class="slider-inner">
+                        <div class="slides">
+                            <img src="~/Content/new/2.png" />
+                            <img src="~/Content/new/1.jpg" />
+                            <img src="~/Content/new/3.png" />
+                        </div>
+                    </div>
+                </div>
+
+            </table>
+
+        </div>
+    </section>
+
+    <div class="sec-text">
+        <h3 class="sec-text__title">Это легально и безопасно</h3>
+        <p class="sec-text__dsc">
+            Yobit.net является торговой площадкой для широкого набора электронных валют,
+            подобных Bitcoin. Иметь аккаунт в сервисе Yobit.net полностью легально, а торговля электронными
+            деньгами разрешена законами практически всех государств по всему миру.
+        </p>
+        <p class="sec-text__dsc">
+            При работе используется криптостойкие алгоритмы шифрования, исключающие получение доступа
+            к кошелькам третьими лицами, а так же подделку электронных счетов. Bitcoin и другие валюты
+            являются чрезвычайно защищёнными и полностью анонимными. Yobit Trading Bot не распространяет
+            каким-либо способом любую информацию о пользователях сервиса.
+        </p>
+    </div>
+
+    <section class="sec2">
+
+        <div class="form">
+            <br>
+            <br>
+            <img src="~/Content/new/10702.png" />
+        </div>
+
+    </section>
+
+    <div class="sec-text">
+        <h3 class="sec-text__title">Криптотрейдинг — один из основных способов заработка на криптовалюте</h3>
+        <p class="sec-text__dsc">Торговля токенами криптовалют несущественно отличается от трейдинга ценными металлами, валютами
+        и акциями. Основная задача остается прежней: купить как можно дешевле, продать подороже и получить
+        прибыль. Основным отличием трейдинга криптовалют от фондового рынка выступает высокая волатильность
+        курса. Многие трейдеры мечтают о доходности в тысячи процентов от сделки, но на фондовом рынке
+        такой сделки приходится ждать годами, выкупая акции малоизвестных компаний в ожидании роста
+        их капитализации. В то же время быстрые сделки с высокой доходность совершенно не редкость
+        для криптотрейдинга.</p>
+    </div>
+
+    <section class="sec3">
+
+        <div class="form">
+            <table>
+            <tr>
+                <td><img src="~/Content/new/img1.png" /></td>
+                <td style="font-size: larger; text-align: justify">
+                    <div style="max-width: 450px">
+                        С приходом на рынок первой цифровой валюты прошло уже достаточно времени, криптовалюты уже переживали бум и падение, по прогнозам многих аналитиков процесс стабилизации курсов произойдет только через 15 лет, за это время многие стартапы смогут взлететь и превзойти конкурентов, но ясно то что монеты имеющие уже огромные вложения не пойдут на дно, они будут расширятся и меняться в лучшую сторону. Пока что основным движущим все остальное криптосообщество является Bitcoin. На апрель 2019 года рыночная капитализация top 20 криптовалют, составляет двести двадцать три миллиарда двести двадцать семь миллионов четыреста пятьдесят четыре тысячи двести один доллар, а в рублях эта сумма звучит еще более солидно: пятнадцать триллионов шестьсот двадцать пять миллиардов девятьсот двадцать один миллион семьсот девяносто четыре тысячи семьдесят. Эта сумма примерно сопоставима с ВВП России в начале этого столетия
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <br>
+                <br>
+                <br>
+                <td style="font-size: larger; text-align: justify;">
+                    Мы имеет технологию, которая гарантированно принесет огромную финансовую выгоду в будущем, но на данном этапе она гарантирует нам стабильную валотильность рынка. С одной стороны это выглядит как проблема, но с другой стороны это и большие возможности для того что бы получить выгоду от грамотной торговли.
+                </td>
+                <td><img src="~/Content/new/IZ1AuVl.png" width="620" height="500" /></td>
+            </tr>
+        </table>
+
+        </div>
+
+    </section>
+
+    <div class="sec-text">
+        <h3 class="sec-text__title">Инфраструктура ASP.NET MVC 5</h3>
+        <p class="sec-text__dsc">Последнюю версия веб-платформы ASP.NET от Microsoft. 
+        Она предлагает высокопродуктивную модель программирования, которая способствует построению 
+        более чистой кодовой архитектуры, обеспечивает разработку через тестирование и поддерживает 
+        повсеместную расширяемость в комбинации со всеми преимуществами ASP.NET.</p>
+    </div>
+
+    <section class="sec4">
+
+        <div class="form">
+
+            <form class="register-form" style="font-size: larger">
+                <div style="text-align: left;">@Html.ValidationSummary()</div>
+                <img src="~/Content/new/0JXCE2e.png" />
+                <br>
+                <div style="text-align: justify;">
+                    «Клиент — сервер» (англ. client–server) — вычислительная или сетевая архитектура, в которой задания или сетевая нагрузка распределены между поставщиками услуг, называемыми серверами, и заказчиками услуг, называемыми клиентами. Фактически клиент и сервер — это программное обеспечение. Обычно эти программы расположены на разных вычислительных машинах и взаимодействуют между собой через вычислительную сеть посредством сетевых протоколов, но они могут быть расположены также и на одной машине.
+                </div>
+                <br>
+                <br>
+                <a style="font-size: large; text-decoration: none;" class="button" href="http://localhost:50058/Home/About">Go To Instruction</a>
+            </form>
+
+        </div>
+
+    </section>
+
+</body>

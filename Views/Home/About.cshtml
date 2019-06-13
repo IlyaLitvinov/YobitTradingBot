@@ -1,0 +1,348 @@
+﻿<style>
+
+    .form {
+        color: white;
+        position: relative;
+        z-index: 1;
+        background-color: #000000b8;
+        max-width: 1080px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .custom-editor {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        outline: 0;
+        background: #0000007d;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .button {
+        font-family: 'DKCForever', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: olivedrab;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+    .button2 {
+        font-family: 'DKCForever', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #8e233b;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+        .button:hover, .button:active, .button:focus, .button2:hover, .button2:active, .button2:focus {
+            background: white;
+            color: black;
+        }
+
+    body {
+        background: #4a604f;
+        background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+        background: -moz-linear-gradient(right, #76b852, #8DC26F);
+        background: -o-linear-gradient(right, #76b852, #8DC26F);
+        background: linear-gradient(to left, #76b852, #8DC26F);
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: url(../../Content/microscope-275984_1920.JPG) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .custom-editor {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        outline: 0;
+        background: #0000007d;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .text {
+        overflow: hidden;
+        height: auto;
+    }
+
+    img.bot_image {
+        width: 465px; /* Ширина рисунка */
+        height: 537px; /*  Высота рисунка */
+        border: none;
+    }
+    .text {
+        border-left-width: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
+        font-size: larger
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <h4 style="font-family: 'DKCForever'; color: white; text-align: right;">instruction</h4>
+
+    <div class="form">
+        <form>
+            <br>
+            <div style="text-align:left">
+
+                <table id="table">
+                    <tr>
+                        <div class="text">
+                            &nbsp&nbsp&nbsp&nbsp Для быстрого старта и правильной обдуманной работы на криптобирже,
+                            с использованием торгового бота предлагается ознакомится с инструкцией.
+                            В ней объясняется примерная концепция успешной работы а так же наиболее выгодные
+                            способы вода и вывода средств.
+                            <br>
+                            <br>
+                            &nbsp&nbsp&nbsp&nbsp Понимание работы биржи позволит вам настроить торговый алгоритм под ваши конкретные
+                            задачи и под ваши финансовые возможности. В будущем вы сможете разработать
+                            свой собственный алгоритм, возможно он окажется очень востребован на площадке,
+                            уже разрабатывается система поощерения авторов торговых алгоритмов.
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                        </div>
+                        <td>
+                            <img width="400" height="300" style="transform: skew(2deg, -15deg); box-shadow: -1em 1em 20px #0aadf091;" src="~/Content/Скрины для инструкции/1.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Зарегистрируйтесь на сайте
+                            <a href="https://yobitex.net/ru" style="color: olivedrab;">Yobit</a>
+                            , указав свой логин, пароль и адрес электронной почты для входа в систему.
+                            Регистрация полностью бесплатна! После отправки заявки на регистрацию,
+                            Вам поступит письмо на электронную почту с активационной ссылкой, по которой
+                            нужно сделать переход для активации аккаунта.
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Когда Ваш аккаунт активирован, для начала работы и выполнения обменов
+                            необходимо пополнить кошелёк в системе (сделать депозит) в разделе Балансы.
+                            В таблице активных валют Вам нужно выбрать необходимую кривтовалюту и нажать
+                            '+' в соответствующей графе, Вам будет предоставлен адрес для зачисления средств,
+                            на который нужно сделать перевод. После успешного зачисления Вам станет доступен
+                            весь функционал Yobit.net для осуществления обменов и получения прибыли.
+                        </td>
+
+                        <td style="text-align:right;">
+                            <img width="400" height="300" style="transform: skew(-2deg, 15deg); box-shadow: 1em 1em 20px #0aadf091;" src="~/Content/Скрины для инструкции/2.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>
+                            <img width="400" height="300" style="transform: skew(2deg, -15deg); box-shadow: -1em 1em 20px #ff8f07bf;" src="~/Content/Скрины для инструкции/3.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Не отправляйте депозиты киви без указанного в форме цифрового комментария.
+                            Без них средства не дойдут, и Yobit не сможет зачислить их через тикеты.
+                            <br>
+                            <br>
+                            ﻿&nbsp&nbsp&nbsp&nbsp Минимальная сумма для депозитов киви - 3000 руб!
+                            В случае депозита на меньшую сумму, аккаунт блокируется со всеми средствами.
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp На данном этапе вам понадобится рабочий
+                            <a href="https://qiwi.com/" style="color: olivedrab;">QIWI</a>
+                            кошелек. Зарегистрируйтесь на сайте и пополните счет самым удобным для вас способом.
+                        </td>
+
+                        <td style="text-align:right;">
+                            <img width="400" height="300" style="transform: skew(-2deg, 15deg); box-shadow: 1em 1em 20px #ff8f07bf;" src="~/Content/Скрины для инструкции/4.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <img width="400" height="300" style="transform: skew(2deg, -15deg); box-shadow: -1em 1em 20px #ff8f07bf;" src="~/Content/Скрины для инструкции/5.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Не отправляйте депозиты киви без указанного в форме цифрового комментария.
+                            Без них средства не дойдут, и Yobit не сможет зачислить их через тикеты.
+                            <br>
+                            <br>
+                            ﻿&nbsp&nbsp&nbsp&nbsp Минимальная сумма для депозитов киви - 3000 руб!
+                            В случае депозита на меньшую сумму, аккаунт блокируется со всеми средствами.
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp После того как средства поступят на ваш личный счет биржи,
+                            вам будет нужно сформировать "Ключ" и "Секрет" в соответствующем разделе на бирже.
+                            <br>
+                            <br>
+                            ﻿&nbsp&nbsp&nbsp&nbsp Секрет ключа доступен для просмотра только в течение часа после создания,
+                            поэтому рекомендуем Вам сохранить его сразу после генерации ключа.
+                            Ключи и их секреты используются для аутентификации пользователя.
+                        </td>
+
+                        <td style="text-align:right;">
+                            <img width="400" height="300" style="transform: skew(-2deg, 15deg); box-shadow: 1em 1em 20px #0aadf091;" src="~/Content/Скрины для инструкции/6.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <img width="400" height="300" style="transform: skew(2deg, -15deg); box-shadow: -1em 1em 20px #6b8e23;" src="~/Content/Скрины для инструкции/7.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Регистрируемся на сайте Yobit Trading Bot в разделе регистрации.
+                            Вносим данные полученные с биржи - "Ключ","Секрет".
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="text">
+                            &nbsp&nbsp&nbsp&nbsp Теперь вам доступен раздел "bot"
+                            <br>
+                            <br>
+                            - Максимальное количество торгуемых пар - это количество видов монет которые покупает бот для торговли одновременно.
+                            <br>
+                            - Минимальная цена криптовалюты р. - что бы не покупать низколиквидные монеты установите минимальную цену одной монеты, с которой вы готовы иметь дело
+                            <br>
+                            - Минимальный размер выгоды в процентах - прибавляем процент к ордеру продажи от цены монеты при покупке.
+                            <br>
+                            - Время ожидания перед продажей (часы) - всегда торговать в плюс не получится, поэтому для подстраховки укажите время в течении которого продаются все неоправдавшие ожидаемый рост монеты
+
+
+                        </td>
+
+                        <td style="text-align:right;">
+                            <img width="400" height="300" style="transform: skew(-2deg, 15deg); box-shadow: 1em 1em 20px #6b8e23;" src="~/Content/Скрины для инструкции/8.jpg" />
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </td>
+                    </tr>
+
+
+                </table>
+
+
+
+
+
+
+
+
+
+</div>
+        </form>
+    </div>
+
+}
+
+
+

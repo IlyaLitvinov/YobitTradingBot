@@ -1,0 +1,284 @@
+﻿@model YobitTradingBot.Models.BotModel
+@using Microsoft.AspNet.Identity;
+@{ViewBag.Title = "Bot";}
+
+<style>
+
+    .form {
+        color: white;
+        position: relative;
+        z-index: 1;
+        background-color: #000000b8;
+        max-width: 1080px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .custom-editor {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        outline: 0;
+        background: #0000007d;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .button {
+        font-family: 'DKCForever', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: olivedrab;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+    .button2 {
+        font-family: 'DKCForever', sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #8e233b;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: white;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
+
+    .button:hover, .button:active, .button:focus, .button2:hover, .button2:active, .button2:focus {
+        background: white;
+        color: black;
+    }
+
+    body {
+        background: #4a604f;
+        background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+        background: -moz-linear-gradient(right, #76b852, #8DC26F);
+        background: -o-linear-gradient(right, #76b852, #8DC26F);
+        background: linear-gradient(to left, #76b852, #8DC26F);
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: url(../../Content/scientific-2040795.JPG) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .custom-editor {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        outline: 0;
+        background: #0000007d;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .text {
+        overflow: hidden;
+        height: auto;
+    }
+
+    img.bot_image {
+        width: 465px; /* Ширина рисунка */
+        height: 537px; /*  Высота рисунка */
+        border: none;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <h4 style="font-family: 'DKCForever'; color: white; text-align: right;">bot</h4>
+
+    <div class="form">
+        <form>
+            <br>
+            <div style="text-align:left">
+
+                <table id="table">
+                    <tr>
+
+                        <td>
+                            Максимальное количество торгуемых пар:
+                            <br>
+                            <input type="text" class="custom-editor" id="TradePairs" value="*">
+                            <br>
+                            Минимальная цена криптовалюты р.:
+                            <br>
+                            <input type="text" class="custom-editor" id="MinPriceTrade" value="*">
+                            <br>
+                            Минимальный размер одного ордера р.:
+                            <br>
+                            <input type="text" class="custom-editor" id="MinOrder" value="*">
+                            <br>
+                            Минимальный размер выгоды в процентах:
+                            <br>
+                            <input type="text" class="custom-editor" id="MinProfit" value="*">
+                            <br>
+                            Время ожидания перед продажей (часы):
+                            <br>
+                            <input type="text" class="custom-editor" id="TimeLose" value="*">
+                            <br>
+                            <br>
+                            <input class="button" type="submit" value="START TRADING" id="startTrading" />
+                            <br>
+                            <br>
+                            <input class="button2" type="submit" value="STOP TRADING" id="stopTrading" />
+                        </td>
+
+                        <td>
+                            <br>
+                            <img class="bot_image" id="img" src="~/Content/id2kyx Статика.png" hidden="hidden">
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+    </div>
+
+}
+
+
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        // Выполнение кода сразу после полной прогрузки документа
+        $(document).ready(function () {
+
+            GetBotData();
+
+        });
+
+
+
+        $("#startTrading").click(function () {
+            StartTrading();
+        });
+
+        $("#stopTrading").click(function () {
+            StopTrading();
+        });
+
+
+        // Остановить торговлю (записывает данные в бд и останавливает)
+        function StopTrading() {
+            var bot = {
+                TradePairs: $('#TradePairs').val(),
+                MinPriceTrade: $('#MinPriceTrade').val(),
+                MinOrder: $('#MinOrder').val(),
+                MinProfit: $('#MinProfit').val(),
+                TimeLose: $('#TimeLose').val(),
+                IsOn: false
+            };
+            $.ajax({
+                url: 'http://localhost:50058/api/bot/EditBot',
+                type: 'PUT',
+                data: JSON.stringify(bot),
+                contentType: "application/json;charset=utf-8",
+                success: function () {
+                    document.getElementById("img").hidden = true;
+                    GetBotData();
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+        // *---------------------------End----------------------------------*
+
+
+        // Начать торговлю (записывает данные в бд и начинает торговлю)
+        function StartTrading() {
+            var bot = {
+                TradePairs: $('#TradePairs').val(),
+                MinPriceTrade: $('#MinPriceTrade').val(),
+                MinOrder: $('#MinOrder').val(),
+                MinProfit: $('#MinProfit').val(),
+                TimeLose: $('#TimeLose').val(),
+                IsOn: true
+            };
+            $.ajax({
+                url: 'http://localhost:50058/api/bot/EditBot',
+                type: 'PUT',
+                data: JSON.stringify(bot),
+                contentType: "application/json;charset=utf-8",
+                success: function () {
+                    document.getElementById("img").hidden = false;
+                    GetBotData();
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+        // *---------------------------End----------------------------------*
+
+
+
+        // Функция возвращает данные сущьности бота привязанного к активному пользователю
+        function GetBotData() {
+                $.ajax({
+                    url: 'http://localhost:50058/api/bot/GetOrCreateBot',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        WriteResponseBotData(data);
+                    },
+                    error: function (x, y, z) {
+                        alert(x + '\n' + y + '\n' + z);
+                    }
+                });
+            }
+
+
+
+        // Функция отображает на странице бота, данные бота конкретного пользователя
+        function WriteResponseBotData(bot) {
+            $("#TradePairs").val(bot.tradePairs);
+            $("#MinPriceTrade").val(bot.minPriceTrade);
+            $("#MinOrder").val(bot.minOrder);
+            $("#MinProfit").val(bot.minProfit);
+            $("#TimeLose").val(bot.timeLose);
+            if (bot.isOn == true) {
+                document.getElementById("img").hidden = false;
+            }
+
+        }
+
+
+
+    </script>
+}
+            
+
+

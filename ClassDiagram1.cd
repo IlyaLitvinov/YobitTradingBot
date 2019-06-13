@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="YobitTradingBot.BundleConfig">
+    <Position X="1.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\BundleConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.FilterConfig">
+    <Position X="3.25" Y="6.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\FilterConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.RouteConfig">
+    <Position X="5.75" Y="8.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Startup">
+    <Position X="9.25" Y="9.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.MvcApplication">
+    <Position X="0.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebApplication1.WebApiConfig">
+    <Position X="4" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\WebApiConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Controllers.AccountController">
+    <Position X="29.5" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAACAAAAAAAIAAAEBAAICAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Controllers.BotController">
+    <Position X="8" Y="10.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAAAAAgAIAAAAAAgAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BotController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="bot" />
+      <Field Name="nmcRur" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="YobitTradingBot.Controllers.HomeController">
+    <Position X="32.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAIAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ActiveOrders">
+    <Position X="29.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true">
+      <Path>
+        <Point X="18.5" Y="7.5" />
+        <Point X="30.125" Y="7.5" />
+        <Point X="30.125" Y="6.497" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\ActiveOrders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ParamsActiveOrders">
+    <Position X="20.25" Y="9" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQEAEAAAAAAAAAIAAAAAAAAAAABgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ActiveOrders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ApplicationContext">
+    <Position X="0.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ConfigurationDB">
+    <Position X="5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ApplicationUser">
+    <Position X="9" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.ApplicationUserManager">
+    <Position X="9" Y="0.5" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.BotModel">
+    <Position X="12.5" Y="10.25" Width="2.5" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.812" Y="9.642" />
+        <Point X="14.812" Y="10.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAAAAQAAAAiAAQAAAAAAAEAAAAQAAAA=</HashCode>
+      <FileName>Models\BotModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.EditModel">
+    <Position X="20" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAQAAAAAAAAAAAgAAAAAACAQAAAAAAAAA=</HashCode>
+      <FileName>Models\EditModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.GetInfo">
+    <Position X="23.5" Y="3.25" Width="2.25" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="7.125" />
+        <Point X="24.438" Y="7.125" />
+        <Point X="24.438" Y="4.546" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\GetInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.Rights">
+    <Position X="3.25" Y="8.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.Funds">
+    <Position X="30.25" Y="14.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.FundsInclOrders">
+    <Position X="30.25" Y="11.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GetInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.Return">
+    <Position X="26.75" Y="8" Width="3.5" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true">
+      <Path>
+        <Point X="18.5" Y="8" />
+        <Point X="26.75" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAIAAAAAAAEQAAAACAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\GetInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.InfoModel">
+    <Position X="19" Y="11.75" Width="1.5" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.125" Y="9.642" />
+        <Point X="18.125" Y="11.375" />
+        <Point X="19.562" Y="11.375" />
+        <Point X="19.562" Y="11.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\InfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.Pairs">
+    <Position X="30.25" Y="13" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\InfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.InfoParam">
+    <Position X="26.5" Y="4" Width="2.25" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="7.313" />
+        <Point X="27.625" Y="7.313" />
+        <Point X="27.625" Y="6.642" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAAAAAEACAEAAAAAAAAAIAAAAAAAAAAAAAQAAIAAAiA=</HashCode>
+      <FileName>Models\InfoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.LoginModel">
+    <Position X="20" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.RegisterModel">
+    <Position X="23.5" Y="8.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAQAAAAAAAAAAAgAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RegisterModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.TimerModule" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="14" Width="4.25" />
+    <InheritanceLine Type="System.Object" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.625" Y="9.642" />
+        <Point X="15.625" Y="10.076" />
+        <Point X="15.625" Y="10.076" />
+        <Point X="15.625" Y="14" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="counterIterations" Type="System.Int32" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="15.636" />
+        <Point X="9" Y="15.636" />
+        <Point X="9" Y="16" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.467" Y="0.687" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="info" Type="YobitTradingBot.Models.InfoModel" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.969" Y="14" />
+        <Point X="17.969" Y="13.421" />
+        <Point X="19.5" Y="13.421" />
+        <Point X="19.5" Y="13.046" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.277" Y="-0.742" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="interval" Type="System.Int64" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="14.125" />
+        <Point X="4.281" Y="14.125" />
+        <Point X="4.281" Y="15" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="maxOrder" Type="System.Double" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.75" Y="15.938" />
+        <Point X="19.125" Y="15.938" />
+        <Point X="19.125" Y="20.812" />
+        <Point X="23.25" Y="20.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.434" Y="0.394" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="sellPriseDiscount" Type="System.Double" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.75" Y="15.312" />
+        <Point X="20.184" Y="15.312" />
+        <Point X="20.184" Y="17.75" />
+        <Point X="23.25" Y="17.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.172" Y="0.409" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="synclock" Type="System.Object">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.807" Y="0.36" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="timer" Type="System.Threading.Timer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.75" Y="14.438" />
+        <Point X="22.093" Y="14.438" />
+        <Point X="22.093" Y="12.687" />
+        <Point X="24" Y="12.687" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.145" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AARAAAAAACCAAAACAAAEAACAAAABCAAARIACIAAAAIA=</HashCode>
+      <FileName>Models\TimerModule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="info" />
+      <Field Name="interval" />
+      <Field Name="maxOrder" />
+      <Field Name="sellPriseDiscount" />
+      <Field Name="synclock" />
+      <Field Name="timer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="counterIterations" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.242" Collapsed="true" />
+  </Class>
+  <Class Name="YobitTradingBot.Models.ParamsTradingPair">
+    <Position X="30.75" Y="6.75" Width="3.25" />
+    <InheritanceLine Type="System.Object" FixedFromPoint="true">
+      <Path>
+        <Point X="18.5" Y="7.688" />
+        <Point X="30.75" Y="7.688" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAgAAAACAQBAAAAAAAAACCIAAAAAAAAAAAAAAEAAAiA=</HashCode>
+      <FileName>Models\TradingPairs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YobitTradingBot.Models.TradingPairs">
+    <Position X="4.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TradingPairs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="14.5" Y="7" Width="4" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Threading.Timer">
+    <Position X="24" Y="10.75" Width="5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="System.Int32">
+    <Position X="7" Y="16" Width="4" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="System.Int64">
+    <Position X="0.5" Y="15" Width="5.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="System.Double">
+    <Position X="23.25" Y="15" Width="5.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
